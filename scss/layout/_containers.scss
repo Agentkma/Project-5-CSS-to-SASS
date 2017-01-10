@@ -1,6 +1,6 @@
 /*************VARIABLES**************/
-$secondary-background-color  :   white;
-$main-container-width        :   90%;
+$secondary-background-color  :    white;
+$main-container-width        :    90%;
 
 
 
@@ -61,7 +61,7 @@ $main-container-width        :   90%;
 .profile-pic{
   width:60%;
   @extend %margin0;
-  padding-bottom: 15pt;
+  padding-bottom: 20pt;
   @include breakpoint(tablet){
       width:40%;
       padding-left: 10pt;
