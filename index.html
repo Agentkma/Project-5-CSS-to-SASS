@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+
+      <meta charset="utf-8" />
+      <title>Project 5 CSS to SASS Responsive Layout</title>
+      <meta name="description" content="Project 5 CSS to SASS Responsive Layout">
+      <meta name="keywords" content="CSS to SASS responsive layout">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="CSS/normalize.css">
+      <link rel="stylesheet" media="screen" href="CSS/application.css">
+
+    </head>
+    <body>
+
+
+                    <header id="home" class="main-header" >
+                      <h1 class="name">Kevin Anderson</h1>
+
+                      <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                          <div id="myDropdown" class="dropdown-content">
+                            <ul class="main-nav" id="div1">
+                              <li><a href="#home">Home </a></li>
+                              <li><a href= "#portfolio"> Portfolio </a></li>
+                              <li><a href="#skills">Skills </a></li>
+                              <li><a href="#contact">Contact </a></li>
+                            </ul>
+                          </div>
+                      </div>
+
+                    </header>
+
+
+                  <div class="profile-section cf::before cf::after">
+
+                    <div class="profile-pic">
+                    <img src= "Images/profile-1.jpg"  alt= "profile pic"/>
+                    </div>
+
+
+                    <div class="profile-intro cf::before cf::after">
+                        <p> Hi! I'm an aspiring front end developer and mobile app developer who loves responsive-design and css.  Im working on a Techedegree in front-end web development at Treehouse and am excited to put all my skills to use!  This project page has been refactored from pure CSS to SASS.  I like SASS!
+                        </p>
+                    </div>
+
+                  </div>
+
+
+                  <div class="port-background cf::before cf::after">
+
+                    <div id="portfolio" >
+                      <h2 class="portfolio-heading">Portfolio</h2>
+                    </div>
+
+                    <div class="main-portfolio cf::before cf::after">
+
+
+
+                      <div class= "col-1 first-col col">
+                        <img src="Images/portfolio-3.png"  alt= " marketing pic" />
+                        <h3>Marketing Page</h3>
+                        <p class="portfolio-text">This project shows the front page of marketing website meant for a specific business I'm interested in.</p>
+                      </div>
+
+                      <div class="col-2 middle-col col">
+                        <img src="Images/portfolio-2.png"  alt= " Search Pic" />
+                        <h3>Search Page</h3>
+                        <p class="portfolio-text">This project searches through a specific database to look for information the user is trying to look up.</p>
+                      </div>
+
+                      <div class="col-1 last-col col">
+                        <img src="Images/portfolio-3.png"  alt= " Travel Pic" />
+                        <h3>Travel App</h3>
+                        <p class="portfolio-text">This project compares travel times based on different transportation methods and tells you the best one.</p>
+                      </div>
+
+                      <div class="col-2 first-col col">
+                        <img src="Images/portfolio-6.png"  alt= " Map Pic" />
+                        <h3>Map of Favorite Spots</h3>
+                        <p class="portfolio-text">This project used mapping apps to plot points for my favorites spots in the city for a do-it-yourself walking tour.</p>
+                      </div>
+
+                      <div class="col-1 middle-col col">
+                        <img src="Images/portfolio-5.png"  alt= " Photo Gallery Pic" />
+                        <h3>Photo Gallery</h3>
+                        <p class="portfolio-text">This project shows pictures of a recent trip to the viewer and allows them to easlity navigate through the photos.</p>
+                      </div>
+
+                      <div class="col-2 last-col col">
+                        <img src="Images/portfolio-4.png"  alt= " Calculator Pic" />
+                        <h3>Calculator</h3>
+                        <p class="portfolio-text">Someone can enter the numbers they want, and press the big blue button and get the result.</p>
+                      </div>
+
+                      <div class="col-1 first-col col">
+                        <img src="Images/portfolio-12.png"  alt= " Calendar Pic" />
+                        <h3>Calendar</h3>
+                        <p class="portfolio-text">Someone can search calendars for holidays for local, regional, national, and international locations.</p>
+                      </div>
+
+                      <div class="col-2 middle-col col">
+                        <img src="Images/portfolio-13.png"  alt= " Address Pic" />
+                        <h3>Address</h3>
+                        <p class="portfolio-text">Someone can enter an address and get a map and directions to it with the shortest distance and shortest travel time.</p>
+                      </div>
+
+                      <div class="col-1 last-col col">
+                        <img src="Images/portfolio-14.png"  alt= " Notes Pic" />
+                        <h3>Notes</h3>
+                        <p class="portfolio-text">Someone can add notes to any document for others to see.</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+              <div id="skills" class="cf::before cf::after skills">
+                <h2>Skills</h2>
+                <p>I'm currently learning HTML and CSS with Teamtreehouse.  I plan to continue to learn Java, Ruby, and perhaps Python.  I'm also interested in learning iOS app languages.</p>
+              </div>
+
+              <div id="contact" class="cf::before cf::after contact">
+                <h2>Contact</h2>
+                <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+                <p class="phone">Phone <a href= "11115551234"> +1(111) 555-1234 </a> </p>
+                <p class="email">Email <a href= "email@yoursite.com"> email@yoursite.com </a> </p>
+              </div>
+
+            <div>
+              <footer class="main-footer cf::before cf::after">
+
+                <h2 class="header-name "> Kevin Anderson </h2>
+
+                <div class="footer-li cf::before cf::after">
+                <ul>
+
+                  <li class="back-to-top"><a href= "#home">Back to Top</a></li>
+                  <li class="footer-nav"><a href= "#home">Home</a></li>
+                  <li class="footer-nav"><a href= "#portfolio">Portfolio</a></li>
+                  <li class="footer-nav"><a href= "#skills">Skills</a></li>
+                  <li class="footer-nav"><a href= "#contact">Contact</a></li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+          <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+          <script src="script.js"></script>
+
+    </body>

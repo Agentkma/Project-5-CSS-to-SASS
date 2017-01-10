@@ -1,0 +1,328 @@
+/*************VARIABLES**************/
+/*************MIXINS**************/
+/*******GLOBAL STYLES*******/
+* {
+  box-sizing: border-box;
+  list-style: none; }
+
+/*******MAIN STYLES*******/
+body {
+  margin: 20pt auto 0;
+  background: azure;
+  background-size: cover;
+  padding-bottom: 10pt;
+  padding-top: 10pt; }
+  @media (min-width: 768px) {
+    body {
+      padding-top: 15pt; } }
+
+header {
+  padding-bottom: 12.5pt; }
+  @media (min-width: 768px) {
+    header {
+      padding-bottom: 0; } }
+
+img {
+  padding-top: 15pt;
+  padding-bottom: 5pt;
+  width: 100%; }
+
+.main-nav li {
+  background-color: white; }
+  @media (min-width: 768px) {
+    .main-nav li {
+      background: azure; } }
+
+.back-to-top a {
+  float: right; }
+
+.footer-nav a {
+  display: none; }
+
+@media (min-size: 768px) {
+  /* Dropdown Button */
+  .dropbtn {
+    background: url("../.../.../menuIcon.png");
+    color: white;
+    padding: 16px;
+    font-size: 50px;
+    border: none;
+    cursor: pointer; }
+
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41; }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block; }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1; }
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display: block; }
+
+  /*input.myImageButton {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-indent: -3000px;
+    background: url("../../../Images/menuIcon.png") no-repeat 50% 50%;
+    /* width: 20%;
+    height: 100%;
+  } */ }
+/*************** VARIABLES ****************/
+/*****could create mixin with font weight, size, text transorm as arguments to pass in with default values
+
+@mixin($fontsize="15pt", $fontweight="bold",$textransform="uppercase")
+{font-size:$fontsize;
+font-weight:$fontweight;
+text-transform:$texttransform;
+}*****/
+* {
+  font-family: arial, sans-serif;
+  font-weight: lighter; }
+
+body {
+  font-family: arial, sans-serif; }
+
+h1 {
+  font-weight: bold;
+  font-size: 25pt; }
+
+h2 {
+  font-weight: bold;
+  font-size: 20pt;
+  text-transform: uppercase; }
+
+h3 {
+  font-weight: 500;
+  font-size: 15pt; }
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold; }
+
+.main-nav a {
+  font-weight: bold;
+  font-size: 15pt;
+  text-transform: uppercase;
+  line-height: 30pt; }
+
+.profile-intro {
+  font-size: 15pt;
+  line-height: 125%; }
+
+.header-name {
+  font-weight: bold;
+  text-transform: none; }
+
+.back-to-top a {
+  font-weight: bold;
+  font-size: 20pt;
+  text-transform: uppercase; }
+
+@media (min-width: 768px) {
+  .footer-li li {
+    text-transform: uppercase; } }
+body, p, .main-portfolio {
+  text-align: center; }
+
+.profile-section, .profile-pic, .profile-intro, .main-portfolio, .portfolio-text, .skills, .contact, .main-footer {
+  margin: 0 auto; }
+
+.main-portfolio, .portfolio-text, .skills, .contact, .main-footer {
+  width: 90%; }
+
+/*************MIXINS**************/
+/*************VARIABLES**************/
+/*************STYLES*************/
+.main-header {
+  width: 90%;
+  /*display:block;*/
+  margin: auto; }
+  @media (min-width: 768px) {
+    .main-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  @media (min-width: 1024px) {
+    .main-header {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.main-nav a {
+  width: 100%; }
+.main-nav li {
+  margin: 5px 20px; }
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    align-items: flex-end; } }
+@media (min-width: 1024px) {
+  .main-nav {
+    margin: 5px 0px 5px 20px; } }
+
+.profile-section {
+  width: 90%; }
+  @media (min-width: 768px) {
+    .profile-section {
+      display: flex;
+      padding-top: 15pt;
+      padding-bottom: 15pt; } }
+
+.profile-pic {
+  width: 60%;
+  padding-bottom: 15pt; }
+  @media (min-width: 768px) {
+    .profile-pic {
+      width: 40%;
+      padding-left: 10pt;
+      order: 2; } }
+
+.profile-intro {
+  padding-bottom: 5pt;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .profile-intro {
+      line-height: 20pt;
+      width: 60%; }
+      .profile-intro p {
+        text-align: left;
+        padding-top: 15pt;
+        margin: 0;
+        margin-right: 0; } }
+  @media (min-width: 1024px) {
+    .profile-intro {
+      line-height: 30pt; }
+      .profile-intro p {
+        margin-right: 10pt;
+        order: -1; } }
+
+.portfolio-heading {
+  padding-bottom: 15pt;
+  padding-top: 20pt;
+  margin: 0; }
+
+.port-background {
+  width: 100%;
+  background-color: white;
+  background-size: cover;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  clear: both;
+  min-height: 100pt;
+  display: inline-block; }
+  @media (min-width: 1024px) {
+    .port-background {
+      margin: 0 auto; } }
+
+.main-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10pt; }
+  .main-portfolio .col {
+    flex-basis: 300px;
+    align-content: space-between;
+    margin: 0 auto; }
+  @media (min-width: 768px) {
+    .main-portfolio {
+      width: 90%; } }
+  @media (min-width: 1024px) {
+    .main-portfolio {
+      width: 95%; } }
+
+.portfolio-text {
+  padding-bottom: 10pt; }
+  @media (min-width: 768px) {
+    .portfolio-text {
+      width: 90%;
+      min-height: 50pt;
+      max-height: 50pt;
+      padding-bottom: 20pt; } }
+
+.skills, .contact {
+  padding-top: 30pt; }
+  @media (min-width: 768px) {
+    .skills, .contact {
+      clear: both;
+      padding-top: 10pt;
+      display: block;
+      width: 60%;
+      margin: 10pt auto; } }
+
+.phone {
+  padding-top: 10pt; }
+
+.email {
+  padding-bottom: 30pt; }
+
+.main-footer {
+  padding-top: 20pt;
+  padding-bottom: 20pt;
+  border-top: 1px solid black; }
+  .main-footer .header-name {
+    float: left;
+    margin: 0;
+    padding: 0; }
+  @media (min-width: 768px) {
+    .main-footer .back-to-top a {
+      float: left;
+      display: none; }
+    .main-footer .footer-li {
+      display: inline;
+      float: right; }
+      .main-footer .footer-li li {
+        float: left;
+        padding-left: 10pt; }
+    .main-footer .footer-nav a {
+      display: inline; } }
+
+/** CLEARFIX
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    contenteditable attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that are clearfixed.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+.cf::before,
+.cf::after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf::after {
+  clear: both; }
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+/*.cf {
+  *zoom: 1;
+}*/
+
+/*# sourceMappingURL=application.css.map */

@@ -1,0 +1,85 @@
+/*************** VARIABLES ****************/
+
+$header-h1-fontsize   :    25pt;
+$secondary-fontsize   :    20pt;
+ $primary-fontsize    :    15pt;
+ $primary-fontfamily  :  arial, sans-serif;
+ $primary-font-color  :  black;
+ $primary-font-weight : bold;
+ $text-uppercase      : uppercase;
+
+
+/*****could create mixin with font weight, size, text transorm as arguments to pass in with default values
+
+@mixin($fontsize="15pt", $fontweight="bold",$textransform="uppercase")
+{font-size:$fontsize;
+font-weight:$fontweight;
+text-transform:$texttransform;
+}*****/
+
+
+* {
+
+  font-family: $primary-fontfamily;
+  font-weight: lighter;
+  }
+
+
+  body {
+
+    font-family: $primary-fontfamily;
+      }
+
+h1 {
+  font-weight: $primary-font-weight;
+  font-size: $header-h1-fontsize;
+  }
+
+h2 {
+  font-weight: $primary-font-weight;
+  font-size: $secondary-fontsize;
+  text-transform: $text-uppercase;
+  }
+
+h3 {
+  font-weight: 500;
+  font-size: $primary-fontsize;
+  }
+
+a {
+  color: $primary-font-color;
+  text-decoration: none;
+  font-weight: $primary-font-weight;
+  }
+
+.main-nav a {
+  font-weight: $primary-font-weight;
+  font-size: $primary-fontsize;
+  text-transform: $text-uppercase;
+  line-height: 30pt;
+    }
+
+
+.profile-intro {
+font-size: $primary-fontsize;
+line-height: 125%;
+  }
+
+
+.header-name{
+  font-weight: $primary-font-weight;
+  text-transform: none;
+
+}
+
+  .back-to-top a{
+    font-weight: $primary-font-weight;
+    font-size: $secondary-fontsize;
+    text-transform: $text-uppercase;
+    }
+
+  @media (min-width: 768px){
+
+    .footer-li li
+    {text-transform: $text-uppercase;}
+  }
