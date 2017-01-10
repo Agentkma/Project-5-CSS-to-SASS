@@ -193,7 +193,7 @@ body, p, .main-portfolio {
 
 .profile-pic {
   width: 60%;
-  padding-bottom: 15pt; }
+  padding-bottom: 20pt; }
   @media (min-width: 768px) {
     .profile-pic {
       width: 40%;
