@@ -2,26 +2,31 @@
 
 $header-h1-fontsize   :    25pt;
 $secondary-fontsize   :    20pt;
+$primary-fontfamily   :    arial, sans-serif;
+$primary-font-color   :    black;
+
+
  $primary-fontsize    :    15pt;
- $primary-fontfamily  :  arial, sans-serif;
- $primary-font-color  :  black;
- $primary-font-weight : bold;
- $text-uppercase      : uppercase;
+ $primary-font-weight :    bold;
+ $text-uppercase      :    uppercase;
 
 
-/*****could create mixin with font weight, size, text transorm as arguments to pass in with default values
 
-@mixin($fontsize="15pt", $fontweight="bold",$textransform="uppercase")
+
+
+/*****could create mixin with font weight, size, text transorm as arguments to pass in with default values*****/
+
+@mixin Fonts ($fontsize:"15pt", $fontweight:"bold",$textransform:"uppercase", $fontcolor:black)
 {font-size:$fontsize;
 font-weight:$fontweight;
 text-transform:$texttransform;
-}*****/
+color: $fontcolor;
+}
 
 
 * {
-
+  @include Fonts(null,lighter,null);
   font-family: $primary-fontfamily;
-  font-weight: lighter;
   }
 
 
@@ -31,55 +36,49 @@ text-transform:$texttransform;
       }
 
 h1 {
-  font-weight: $primary-font-weight;
-  font-size: $header-h1-fontsize;
+  @include Fonts(bold,25px,none);
   }
 
 h2 {
-  font-weight: $primary-font-weight;
-  font-size: $secondary-fontsize;
-  text-transform: $text-uppercase;
+  @include Fonts(20px);
   }
 
 h3 {
-  font-weight: 500;
-  font-size: $primary-fontsize;
+  @include Fonts(500,15px,none);
+
   }
 
 a {
-  color: $primary-font-color;
+  @include Fonts(15,null,none);
   text-decoration: none;
-  font-weight: $primary-font-weight;
   }
 
 .main-nav a {
-  font-weight: $primary-font-weight;
-  font-size: $primary-fontsize;
-  text-transform: $text-uppercase;
+  @include Fonts;
   line-height: 30pt;
     }
 
 
 .profile-intro {
-font-size: $primary-fontsize;
+@include Fonts(15px,null,null);
 line-height: 125%;
   }
 
 
 .header-name{
-  font-weight: $primary-font-weight;
-  text-transform: none;
+  @include Fonts(null, bold,none);
+
 
 }
 
   .back-to-top a{
-    font-weight: $primary-font-weight;
-    font-size: $secondary-fontsize;
-    text-transform: $text-uppercase;
+    @include Fonts(20px);
     }
 
   @media (min-width: 768px){
 
     .footer-li li
-    {text-transform: $text-uppercase;}
+    {@include Fonts(null,null,uppercase);
+      
+    }
   }
