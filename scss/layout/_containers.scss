@@ -11,7 +11,6 @@ $main-container-width        :    90%;
 
 .main-header {
   width: $main-container-width ;
-  /*display:block;*/
   margin: auto;
   @include breakpoint(tablet){
   display: flex;
@@ -25,22 +24,24 @@ $main-container-width        :    90%;
 
 
 
-.main-nav
-  { a {width: 100%;}
-      li {
-          margin: 5px 20px;
-        }
-    @include breakpoint(tablet)
-      {
+.main-nav{
+    @include breakpoint(tablet){
       display: flex;
-      align-items: flex-end;
-
-      }
-   @include breakpoint(desktop)
-      {
-        margin: 5px 0px 5px 20px;
-      }
-    }
+      align-items: flex-end
+    };
+    li {margin: 5px 0;
+        width: 100%;
+        @include breakpoint(tablet)
+           {
+            ;
+              margin: 5px 20px;
+            };
+        @include breakpoint(desktop)
+          {
+            margin: 5px 0px 5px 20px;
+          }
+        }
+}
 
 
 
@@ -50,6 +51,7 @@ $main-container-width        :    90%;
   @extend %margin0;
   @include breakpoint(tablet){
       display: flex;
+      justify-content: space-between;
       padding-top: 15pt;
       padding-bottom: 15pt;
       }
@@ -59,35 +61,42 @@ $main-container-width        :    90%;
 
 
 .profile-pic{
-  width:60%;
-  @extend %margin0;
+  width:100%;
+  // @extend %margin0;
   padding-bottom: 20pt;
   @include breakpoint(tablet){
       width:40%;
+      padding-left: 10pt;
+      order: 2;
+    };
+  @include breakpoint(desktop){
+      width:30%;
       padding-left: 10pt;
       order: 2;
       }
   }
 
 .profile-intro {
-
   padding-bottom: 5pt;
   width: 100%;
+  line-height: 1.5em;
+  margin:0;
   @extend %margin0;
   @include breakpoint(tablet){
-    line-height: 20pt;
+    line-height: 2em;
     width: 60%;
      p
        {text-align: left;
         padding-top: 15pt;
-        margin: 0;
-        margin-right: 0;
+
+
         }
       }
   @include breakpoint(desktop)
-    { line-height: 30pt;
+    { line-height: 2.5em;
       p
-      {margin-right: 10pt;
+      {
+        // margin-right: 10pt;
        order: -1;
       }
     }
@@ -130,7 +139,7 @@ $main-container-width        :    90%;
     width: $main-container-width ;
     }
   @include breakpoint(desktop){
-    width: 95%;
+    width: 92.5%;
 
     }
   }

@@ -1,9 +1,17 @@
 
+a{
+  transition: all 1s ease-in-out;
+}
+a:hover {
+
+  font-size: 1.5em;
+}
+
+
 
 
 .back-to-top a{
   float:right;
-
   }
 
 .footer-nav a{

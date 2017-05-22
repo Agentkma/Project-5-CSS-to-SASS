@@ -19,7 +19,7 @@ $primary-font-color   :    black;
 @mixin Fonts ($fontsize:"15pt", $fontweight:"bold",$textransform:"uppercase", $fontcolor:black)
 {font-size:$fontsize;
 font-weight:$fontweight;
-text-transform:$texttransform;
+text-transform:$textransform;
 color: $fontcolor;
 }
 
@@ -30,10 +30,10 @@ color: $fontcolor;
   }
 
 
-  body {
+body {
 
-    font-family: $primary-fontfamily;
-      }
+  font-family: $primary-fontfamily;
+    }
 
 h1 {
   @include Fonts(bold,25px,none);
@@ -60,9 +60,9 @@ a {
 
 
 .profile-intro {
-@include Fonts(15px,null,null);
-line-height: 125%;
-  }
+@include Fonts(20px,null,null);
+
+}
 
 
 .header-name{
@@ -79,6 +79,6 @@ line-height: 125%;
 
     .footer-li li
     {@include Fonts(null,null,uppercase);
-      
+
     }
   }
