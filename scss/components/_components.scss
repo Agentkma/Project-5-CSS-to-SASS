@@ -1,0 +1,15 @@
+
+
+.col {
+  perspective: 200px;
+}
+.col img {
+  transition: all 1s ease-in-out;
+
+
+}
+
+.col img:hover {
+  transform: rotateX(-10deg);
+
+}
